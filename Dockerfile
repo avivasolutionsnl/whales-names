@@ -12,9 +12,8 @@ RUN npm run build
 
 COPY boot.cmd boot.cmd
 
-FROM builder
+FROM stefanscherer/node-windows
 
-COPY --from=builder nodejs nodejs
 COPY --from=builder node_modules node_modules
 COPY --from=builder lib lib
 
