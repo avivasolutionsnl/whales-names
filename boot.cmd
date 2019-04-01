@@ -1,1 +1,1 @@
-node lib/index.js C:\driversetc\hosts
+node lib/index.js C:\drivers\etc\hosts
