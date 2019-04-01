@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
  whalesnames:
-  image: "whales-names"
+  image: whales-names
   isolation: process
   volumes:
     - C:\Windows\System32\drivers\etc:c:\drivers\etc
