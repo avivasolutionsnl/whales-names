@@ -9,12 +9,12 @@ COPY package-lock.json package-lock.json
 
 RUN npm install
 RUN npm run build
+RUN npm prune --production
 
-COPY boot.cmd boot.cmd
-
-FROM stefanscherer/node-windows
+FROM stefanscherer/node-windows:pure
 
 COPY --from=builder node_modules node_modules
 COPY --from=builder lib lib
+COPY boot.cmd boot.cmd
 
 ENTRYPOINT [ "boot.cmd" ]

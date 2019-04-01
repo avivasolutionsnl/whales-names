@@ -1,1 +1,1 @@
-whales-names.cmd C:\driversetc\hosts
+node lib/index.js C:\driversetc\hosts
